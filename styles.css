@@ -1,0 +1,115 @@
+
+
+@keyframes buenos {
+    0% {left: 0px; top: 0px}
+    100%{left: 440px; top: 0px }   
+}
+
+@keyframes cosas {
+    100% {transform: rotate(45deg);}   
+}
+
+@keyframes bruja {
+    100% {transform: skew(20deg,10deg);}
+}
+
+@keyframes dragon {
+    0% {transform: scale(0)}
+    33% {transform: scale(1,2)}
+    66% {transform: scale(0.6)}
+    100% {transform: scale(1)}   
+}
+
+@keyframes nomo {
+    0% {transform: matrix(1, -0.3, 0, 1, 0, 0)}
+    33% {transform: matrix(2, 0,2, 0, 2, 0, 0)}
+    66% {transform: matrix(1, -0.1, 1, 1, 0, 0)}
+    100% {transform: matrix(3, -0.6, 1, 2, 5, 3)}   
+}
+
+@keyframes body {
+    0% {transition: color(rgb(0, 140, 255))}
+    33% {transition: color(rgb(0, 255, 234))}
+    66% {transition: color(rgb(0, 255, 128))}
+    100% {transition: color(rgb(255, 238, 0))}
+
+    
+}
+body{
+    background: linear-gradient(red, yellow);
+    animation: body 10s alternate infinite;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex: 20%;
+    justify-content: space-around;
+}
+
+.buenos{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    animation: buenos 3s infinite;
+    transform: translate(0px,0px);   
+}
+
+.malos{
+    display: flex;
+    flex-direction: column;   
+}
+
+
+.cosas{
+    display: flex;
+    flex-direction: column;
+}
+
+#principe, #princesa, #rana, #hada{
+    margin: 15px;
+    width: 100px;
+}
+
+#espada, #lampara, #manzana, #castillo{
+    margin: 65px;
+    width: 100px;
+    transform: rotate(-45deg);
+    animation: cosas 3s infinite alternate;
+}
+
+#bruja, #dragon, #nomo{
+    margin: 65px;
+    width: 100px;
+}
+
+.objetos{
+    display: flex;
+    flex-direction: column;
+    width: 100px;  
+}
+
+.malos{
+    display: flex;
+    flex-direction: column;
+    width: 100px;  
+}
+
+
+/*Bruja: Transformación skew eje X: 20, eje Y: 10*/
+#bruja:hover{
+    animation: bruja 3s infinite alternate;
+}
+.hover{
+    width: 200px;
+    height: 200px;
+    
+}
+.hover:hover #dragon{
+    animation: dragon 1s alternate infinite ease; 
+}
+
+#nomo:hover{
+    position: relative;
+    animation: nomo 2s alternate infinite ease; 
+}
